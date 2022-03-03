@@ -1,0 +1,173 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+}
+body{
+  height: 100vh;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+
+section{
+  background-color: var(--body-bg-color);
+  height: 100%;
+  width: 100%;
+  padding: 0rem 2rem ; 
+
+  transition: all .2s ease-in-out;
+}
+
+.logo{
+  width: 100%;
+  max-width: 20rem;
+
+  margin-top: 3.12rem;
+  margin-bottom: 5.75rem;
+}
+
+h1{
+  font-family: "Work Sans";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+
+}
+
+h2{
+  font-family: Spartan;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;
+
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+p{
+  font-family: Spartan;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.18rem;
+  color: var(--text-color);
+}
+
+form{
+  margin: 3.12rem 0rem;
+}
+
+form label{
+  font-family: Spartan;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.18rem;
+  color: var(--form-color);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+form div {
+  height: 3rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-left: 5px solid var(--title-color);
+
+  
+}
+
+form div input{
+  height: 100%;
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 0 1rem;
+
+  font-family: Work Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.87rem;
+}
+
+form div button{
+  height: 48px;
+  width: 48px;
+
+  border: none;
+  background-color: var(--bg-button-color);
+
+  cursor: pointer;
+}
+
+a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+
+  font-family: Spartan;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.18rem;
+  gap: .5rem;
+
+}
+
+div.hidden{
+  display: none;
+}
+
+div.read-news-img{
+  background-image: url("/assets/img/read_news.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+@media (min-width: 1100px){
+
+  main{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+  }
+
+  section{
+    z-index: 111;
+  }
+  section form div{
+    width: 60vw;
+  }
+
+  div.hidden{
+    display: inherit;
+  }
+
+  form div{
+    box-shadow: 2px 2px 10px rgb(19, 19, 19);
+  }
+}
